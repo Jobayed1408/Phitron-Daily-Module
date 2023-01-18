@@ -1,0 +1,84 @@
+#include<stdio.h>
+int main()
+{
+    int n = 3;
+    //scanf("%d",&n);
+    int ar[n][n];
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<=n; j++)
+        {
+            scanf("%d",&ar[i][j]);
+        }
+    }
+
+    int sum1=0,sum2=0,sum3=0,sum4=0,sum5=0,sum6=0,sum7=0,sum8=0;
+    for(int j=1; j<=n; j++)
+    {
+        //printf("%d ",ar[i][j]);
+        sum1+=ar[1][j];
+    }
+    //printf("sum1 %d\n",sum1);
+    for(int j=1; j<=n; j++)
+    {
+        //printf("%d ",ar[i][j]);
+        sum2+=ar[2][j];
+    }
+    //printf("sum2 %d\n",sum2);
+    for(int j=1; j<=n; j++)
+    {
+        //printf("%d ",ar[i][j]);
+        sum3+=ar[2][j];
+    }
+    printf("sum3 %d\n",sum3);
+    for(int j=1; j<=n; j++)
+    {
+        //printf("%d ",ar[i][j]);
+        sum4+=ar[j][1];
+    }
+    printf("sum4 %d\n",sum4);
+    for(int j=1; j<=n; j++)
+    {
+        //printf("%d ",ar[i][j]);
+        sum5+=ar[j][2];
+    }
+    printf("sum5 %d\n",sum5);
+    for(int j=1; j<=n; j++)
+    {
+        //printf("%d ",ar[i][j]);
+        sum6+=ar[j][3];
+    }
+    printf("sum6 %d\n",sum6);
+
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<=n; j++)
+        {
+            if(i==j)
+            {
+                sum7+=ar[i][j];
+            }
+        }
+    }
+    printf("sum7 %d\n",sum7);
+
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<=n; j++)
+        {
+            if(i+j == n+1)
+            {
+                sum8+=ar[i][j];
+            }
+        }
+    }
+    printf("sum8 %d\n",sum8);
+
+    if(sum1==sum2 && sum1==sum3 && sum1==sum4 && sum1==sum5 &&sum1==sum6 && sum1==sum7 && sum1==sum8) printf("YES\n");
+    else printf("NO\n");
+
+
+}
+
+
+

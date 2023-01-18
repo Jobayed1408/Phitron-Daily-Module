@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+struct stud {
+    
+    char name[10];
+    int roll;
+
+    int marks;
+};
+
+int main() {
+    int size;
+    struct stud s;
+
+    size = sizeof(s);
+    printf("nSize of Structure : %d", size);
+
+    return(0);
+}

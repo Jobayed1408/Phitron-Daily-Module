@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,mod,div,i=1,res=0,new_res=0;
+    scanf("%d",&n);
+    mod = n%6;
+    div = n/6;
+//    if(n%2==0)
+//    {
+//        if(n%3==0)
+//        {
+//            if(mod==0) res = ((div/2)*-9);
+//        }
+//    }
+//    else
+//    {
+//
+       while(mod>=1){
+            if(mod>3){
+                res+=n*(-1);
+            }
+            else{
+                res+=n;
+            }
+        printf("%d\n",res);
+        //new_res += res;
+        n--;
+        mod--;
+        }
+        res = res + ((div)*-9);
+        printf("Final result %d\n",res);
+    }
+    //printf("%d\n",res);

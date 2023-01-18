@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+    int n, i;
+    scanf("%d",&n);
+
+    while(n--){
+        int flag = 1;
+        char s[21];
+        scanf("%s",s);
+        int l = strlen(s);
+        for( i = 0; i < l; i++){
+            if (s[i] != s[l - i - 1]){
+                flag = 0;
+            break;
+            }
+        }
+        if(flag == 0) printf("Case #1: Not Palindrome\n");
+
+        else {
+            if(l<=7){
+                printf("Case #3: ");
+                for(int i=0;i<=l-1;i++){
+                    printf("%c",s[i]);
+                }
+                printf("\n");
+            }
+            else{
+                printf("Case #2: ");
+                printf("%c",s[0]);
+                printf("%d",l-2);
+                printf("%c\n",s[l-1]);
+            }
+        }
+    }
+
+}
+

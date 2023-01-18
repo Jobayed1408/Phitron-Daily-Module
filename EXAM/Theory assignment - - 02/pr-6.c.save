@@ -1,0 +1,24 @@
+#include<stdio.h>
+int fact(int n)
+{
+    int k = 1;
+    for(int i=1;i<=n;i++)
+    {
+        k*=i;
+    }
+    return k;
+}
+int ratio_func(int m,int n)
+{
+    return fact(m)/fact(n);
+}
+int main()
+{
+    int b,c;
+    scanf("%d%d",&b,&c);
+    if(c>b){
+        int 
+    }
+    printf("%d\n",ratio_func(b,c));
+
+}

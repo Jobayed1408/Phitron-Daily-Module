@@ -1,0 +1,16 @@
+struct workers
+{
+    int id;
+    int age;
+    float salary;
+
+} ;
+
+int main()
+{
+    struct workers emp;// = {"Jack", 30, 1234.5, "Sales"};
+    struct workers emp;
+    emp->id = 20032051;
+    emp->age = 25;
+    printf("Workers id %d\nWorkers age %d",emp->id,emp->age);
+}

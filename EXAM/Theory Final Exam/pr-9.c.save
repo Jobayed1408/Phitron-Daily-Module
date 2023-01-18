@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main()
+{
+  int x = 10;
+  int b = 20, c;
+  //x + b = c;
+  printf("%d", x);
+}

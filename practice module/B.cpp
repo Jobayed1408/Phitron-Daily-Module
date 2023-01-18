@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    string s;
+    cin>>s;
+    long long int fre[27];
+    for(int i=1;i<=26;i++)
+        fre[i]=0;
+    for(long long int i=0;i<s.length();i++)
+    {
+        fre[s[i]-'A'+1]++;
+    }
+//    for(int i=1;i<=26;i++)
+//        cout<<fre[i]<<" ";
+    long long int max=0;
+    //long long int index=0;
+    for(int i=1;i<27;i++)
+    {
+        if(fre[i]>max)
+        {
+            max=fre[i];
+            //index=i;
+        }
+    }
+    cout<<max<<"\n";
+}
+//    //cout<<'\n'<<index<<" "<<fre[index]<<"\n";
+//    for(int i=0;i<max;i++)
+//    {
+//        char ch=(index +'A'-1);
+//        cout<<ch;
+//    }
+//
+//
+
+//
+//}

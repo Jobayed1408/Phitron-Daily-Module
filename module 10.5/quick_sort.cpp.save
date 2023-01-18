@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<int> quick_sort(vector<int>&a)//, int n)
+{
+
+    if(a.size()<=1) return a;
+
+    int pivot = (rand()) % a.size();
+
+    vector<int>l,r;
+    for(int i=0;i<a.size();i++)
+    {
+        if(a[i]==pivot) continue;
+        if(i<=pivot)
+            l.push_back(a[i]);
+        else//(i>pivot)
+            r.push_back(a[i]);
+    }
+
+    vector<int>left = quick_sort(l);
+
+    vector<int>right = quick_sort(r);
+    vector<int>sorted_array;
+
+    for(int i=0;i<left.size();i++)
+        sorted_array.push_back(left[i]);
+
+    sorted_array.push_back(a[pivot]);
+
+    for(int i=0;i<right.size();i++)
+        sorted_array.push_back(right[i]);
+
+    return sorted_array;
+
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int>vec(n);
+    for(int i=0;i<n;i++)
+        cin>>vec[i];
+        
+    vector<int>final_array =  quick_sort(vec);
+    
+    for(int i=0;i<final_array.size();i++)
+        cout<<final_array[i]<<" ";
+}

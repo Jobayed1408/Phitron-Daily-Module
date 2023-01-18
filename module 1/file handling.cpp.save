@@ -1,0 +1,22 @@
+//#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    ofstream f1;
+    f1.open("1.txt");
+    //int x=9;
+    f1<<"hello world";
+    ofstream f1;
+    f2.open("3.txt");
+    
+    ifstream fs;
+    fs.open("o.txt");
+    int x=2033;
+    fs>>x;
+
+    f1.close();
+
+
+}

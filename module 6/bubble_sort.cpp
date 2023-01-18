@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int> a(n);
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+    }
+    //Time complexity  = o(n^2)
+    //Space complexity = o(n )
+    for(int i=0; i<n; i++)
+    {
+        //bool sorted = true;
+        int last = n-1-i;
+        cout<<"Iteration: "<<i+1<<endl;
+        for(int j=0; j<last ; j++)
+        {
+            if(a[j] > a[j+1])
+            {
+                swap(a[j], a[j+1]);
+                //sorted = false;
+            }
+            cout<<"Step: "<<j+1<< " -> ";
+            for(int j=0; j<n; j++)
+            {
+
+                cout<<a[j]<<" ";
+            }
+            cout<<endl;
+
+        }
+        //if(sorted) break;
+
+    }
+
+}

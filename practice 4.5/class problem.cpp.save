@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+class User
+{
+protected:
+    int length;
+};
+
+class Cuboid : User
+{
+private:
+    int width,height;
+
+public:
+    Cuboid(int l, int w, int h)
+    {
+        length = l;
+        width = w;
+        height = h;
+    }
+    Cuboid(int l)
+    {
+        length = l;
+    }
+    void getvolume()
+    {
+        cout<<length*width*height<<"\n";
+    }
+    int getSurfaceArea ()
+    {
+        int area = 2*(length *height + height*width+ width*length);
+        return area;
+    }
+    void print()
+    {
+        cout<<length<< " "<<width<< " " <<height<< " \n";
+    }
+};
+
+int main()
+{
+    Cuboid p{3,2,1};
+    Cuboid p2{2};
+    p.print();
+    p.getvolume();
+    cout<<p.getSurfaceArea()<< " \n";
+
+}

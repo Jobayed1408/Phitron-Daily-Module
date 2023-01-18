@@ -1,0 +1,69 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<int> merge_sort(vector<int>left, vector<int>right)
+{
+    if(left.size()<=1) return left;
+    if(right.size()<=1) return right;
+    int cnt = left.size()+ right.size();
+
+    int mid = (cnt)/2;
+
+    vector<int>sorted_a;
+    int index1=0;
+    int index2=0;
+
+    for(int i=0; i<cnt; i++)
+    {
+        if(index1==left.size())
+        {
+            sorted_a.push_back(right[index2]);
+            index2++;
+        }
+        else if(index2==right.size())
+        {
+            sorted_a.push_back(left[index1]);
+            index1++;
+        }
+        else if(left[index1] > right[index2])
+        {
+            sorted_a.push_back(left[index1]);
+            index1++;
+        }
+        else
+        {
+            sorted_a.push_back(right[index2]);
+            index2++;
+        }
+        cout<<"Size : "<<sorted_a.size()<<" \n";
+        for(int f=0; f<sorted_a.size(); f++)
+        {
+            cout<<sorted_a[f]<< " " ;
+        }
+        cout<<endl;
+    }
+    return sorted_a;
+
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int>a(n);
+    for(int i=0; i<n; i++)
+        cin>>a[i];
+    int m;
+    cin>>m;
+    vector<int>b(m);
+    for(int i=0; i<m; i++)
+        cin>>b[i];
+
+    vector<int> ans = merge_sort(a,b);
+    for(int i=0; i<ans.size(); i++)
+    {
+        cout<<ans[i]<<" ";
+    }
+    cout<<endl;
+}
+

@@ -84,6 +84,28 @@ public:
 
       }
 
+      void SearchIndex(int index)
+      {
+            if(head==NULL || index>=sz)
+            {
+                  return;
+            }
+            if(index==0)
+            {
+                  cout<<head->data<<" \n";
+                  return;
+            }
+            node* temp = head;
+            int i=0;
+            while(i!=index-1)
+            {
+                  temp=temp->next;
+                  i++;
+            }
+            cout<<temp->next->data<< " \n";
+
+      }
+
 
       void Traverse()
       {
@@ -110,4 +132,11 @@ int main()
       dl.InsertByIndex(5,20);
       dl.InsertByIndex(6,23);
       dl.Traverse();
+      dl.SearchIndex(6);
+      dl.SearchIndex(0);
+      dl.SearchIndex(1);
+      dl.SearchIndex(7);
+      dl.Traverse
+
 }
+

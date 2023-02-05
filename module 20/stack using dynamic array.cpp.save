@@ -1,0 +1,84 @@
+//Stack using static array||||
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Stack
+{
+public:
+    int *a;
+    int stack_size;
+    int a_cap;
+    Stack()
+    {
+        a = new int[1];
+        stack_size = 0;
+        a_cap = 1;
+    }
+
+    //Mkaes the array capacity multiplied by 2||
+    void increase_size()
+    {
+		int *tmp = new int[a_cap*2];
+		for(int i=0;i<a_cap;i++)
+		{
+			tmp[i] = a[i];
+		}
+		swap(a,tmp);
+		delete []tmp;
+		a_cap*=2;
+    }
+    
+    void Push(int val)
+    {
+        if(stack_size+1>a_cap)
+        {
+		  increase_size();
+        }
+        stack_size++;
+        a[stack_size-1] = val;
+    }
+
+    void Pop()
+    {
+        if(stack_size == 0)
+        {
+            cout<<"Stack is empty!\n";
+            return;
+        }
+        a[stack_size-1] = 0;
+        stack_size--;
+    }
+
+    int Top()
+    {
+        if(stack_size == 0)
+        {
+            cout<<"Stack  is empty!\n";
+            return -1;
+        }
+        return a[stack_size - 1];
+    }
+
+};
+
+int main()
+{
+    Stack st;
+    st.Push(5);
+    cout<<st.Top()<<"\n";
+    st.Push(4);
+    cout<<st.Top()<<"\n";
+    st.Push(8);
+    cout<<st.Top()<<"\n";
+    st.Push(3);
+    cout<<st.Top()<<"\n";
+    st.Pop();
+    cout<<st.Top()<<"\n";
+    st.Pop();
+    cout<<st.Top()<<"\n";
+    st.Pop();
+    cout<<st.Top()<<"\n";
+    st.Pop();
+    cout<<st.Top()<<"\n";
+}

@@ -1,0 +1,60 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(void)
+{
+//      cout<<"Click\n";
+    int t;
+    cin>>t;
+    while(t!=0)
+    {
+
+        int n, m, sum=0;
+        cin>>n >> m;
+        vector<int>ar(n);
+        vector<int>arr(m);
+        list<int>l;
+        for(int i=0; i<n; i++)
+        {
+            cin>>ar[i];
+        }
+        for(int i=0; i<m; i++)
+        {
+            cin>>arr[i];
+//            sum+=arr[i];
+        }
+
+
+        sort(arr.begin(), arr.end(), greater<int>());
+
+        for(int i=0;i<n;i++)
+        {
+              
+//              if(i==arr.size()-1)
+//              {
+//                    sum+=ar[i];
+//              }
+//              sum-=ar[i];
+        }
+        cout<<sum<<"\n";
+
+//        cout << "Array after sorting : \n";
+//        for (int i = 0; i < m; ++i)
+//            cout << arr[i] << " ";
+
+//        for(auto i=l.begin(); i!=l.end(); i++)
+//        {
+//            cout<<*i<<" ";
+//        }
+//        cout<<"\n";
+      t--;
+    }
+}
+
+int  main(void)
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    solve();
+
+}

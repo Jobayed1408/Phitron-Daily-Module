@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool check_plaindrome(string s , int l, int r)//, string s2)
+{
+//	int ans=1;
+//	for(int i=s.size()-1,j=0; i>s.size()/2, j<s.size()/2 ; i--,j++)
+	if( r <  ) return true;
+	
+		if( s[l] != s[r] )
+		{
+			return false;
+		}
+//	else
+	return check_plaindrome(s, l+1 , r-1 );
+	return true;
+}
+
+int main()
+{
+	string s;
+	cin>>s;
+	if(check_plaindrome(s , 0, s.size()-1) ) cout<<"Yes\n";
+	else cout<<"No\n";
+}

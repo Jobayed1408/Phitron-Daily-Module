@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+//    map<string , int>mp;
+	map<string , int > mp;
+    for(int i=1; i<=t; i++)
+    {
+        string s;
+        cin>>s;
+        mp[s]++;
+        if(mp[s] == 1)
+	   {
+	   	cout<<"OK\n";
+	   }
+	   else
+	   {
+	   	cout<<s<<mp[s]-1<<'\n';
+	   }
+
+    }
+//    cccaabababaccbc
+//    for(auto it: mp)
+//    {
+//		string s = it.first;
+//		
+//    }
+}
